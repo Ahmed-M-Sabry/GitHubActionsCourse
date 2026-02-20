@@ -13,3 +13,8 @@ jobs:
       - name: Print Frist Message
         run: echo "This is First Message from GitHub Action"
       
+      - name: CheckOut Repository
+        uses: actions/checkout@v6.0.2
+
+      - name: List Repository files
+        run: ls -la
