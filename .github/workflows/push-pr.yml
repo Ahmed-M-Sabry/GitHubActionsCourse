@@ -1,0 +1,17 @@
+on:
+  push:
+    branches:
+      - main
+      - 'release/*'
+  pull_request:
+    branches:
+      - main
+      - 'release/**'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+        - name: CheckOut Repository
+          uses: actions/checkout@v6.0.2
+        - name: Run Tests
+          run: echo "Run tests here"
